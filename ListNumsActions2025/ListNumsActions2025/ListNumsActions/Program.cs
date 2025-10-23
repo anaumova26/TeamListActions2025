@@ -53,6 +53,11 @@ namespace ListNumsActions
                         Console.WriteLine(countl);
                         break;
 
+                    case "sumAll":
+                        int sum = nums.Sum();
+                        Console.WriteLine(sum);
+                        break;
+
                     default:
                         break;
                 }
