@@ -35,9 +35,9 @@ namespace ListNumsActions
                     case "contains":
                             num = int.Parse(cmd[1]);
                          if (nums.Contains(num))
-                        {
+                         {
                             Console.WriteLine("YES");
-                        }
+                         }
                         else { Console.WriteLine(   "NO"); }
                         
                         break;
@@ -47,8 +47,28 @@ namespace ListNumsActions
                         
 
                         break;
+                    case"add":
+                        int num1 = int.Parse(cmd[1]);
+                        int num2 = int.Parse(cmd[2]);
+                        num = num1 + num2;
+                        nums.Add(num);
+                        break;
+                    case "countOdds":
+                        int count1 = nums.Count(x => x % 2 == 1);
+                        Console.WriteLine(count1);
 
-                    
+                        break;
+                    case "countEvens":
+                        int count2 = nums.Count(x => x % 2 == 0);
+                        Console.WriteLine(count2);
+
+                        break;
+                   
+                        
+                       
+                        
+
+
                     default:
                         break;
                 }
