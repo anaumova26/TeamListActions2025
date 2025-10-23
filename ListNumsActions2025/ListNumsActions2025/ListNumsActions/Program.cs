@@ -47,7 +47,8 @@ namespace ListNumsActions
                         
 
                         break;
-                    case"add":
+
+                  case"add":
                         int num1 = int.Parse(cmd[1]);
                         int num2 = int.Parse(cmd[2]);
                         num = num1 + num2;
@@ -67,6 +68,17 @@ namespace ListNumsActions
                         
                        
                         
+
+                case "countl":
+                        num = int.Parse(cmd[1]);
+                       int countl= nums.Count(x => x > num);
+                        Console.WriteLine(countl);
+                        break;
+
+                    case "sumAll":
+                        int sum = nums.Sum();
+                        Console.WriteLine(sum);
+                        break;
 
 
                     default:
