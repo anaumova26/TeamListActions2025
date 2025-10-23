@@ -47,8 +47,12 @@ namespace ListNumsActions
                         
 
                         break;
+                    case "countl":
+                        num = int.Parse(cmd[1]);
+                       int countl= nums.Count(x => x > num);
+                        Console.WriteLine(countl);
+                        break;
 
-                    
                     default:
                         break;
                 }
