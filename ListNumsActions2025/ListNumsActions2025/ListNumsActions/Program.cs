@@ -1,4 +1,6 @@
-﻿namespace ListNumsActions
+﻿using System.ComponentModel;
+
+namespace ListNumsActions
 {
     internal class Program
     {
@@ -23,12 +25,21 @@
                         Console.WriteLine(string.Join(" ", nums));
                         break;
                     case "contains":
+                            num = int.Parse(cmd[1]);
+                         if (nums.Contains(num))
+                        {
+                            Console.WriteLine("YES");
+                        }
+                        else { Console.WriteLine(   "NO"); }
                         
-                        //TODO
+                        break;
+                    case "del":
+                        num = int.Parse(cmd[1]);
+                        nums.Remove(num);
+                        
                         break;
 
-
-                    //TO DO
+                    
                     default:
                         break;
                 }
