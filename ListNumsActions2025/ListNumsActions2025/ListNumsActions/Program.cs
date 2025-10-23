@@ -22,8 +22,11 @@
                     case "print":
                         Console.WriteLine(string.Join(" ", nums));
                         break;
-                    case "contains":
-                        
+                    case "remove":
+                        num = int.Parse(cmd[1]);
+                        nums.RemoveAt(num);
+                        break;
+
                         //TODO
                         break;
 
